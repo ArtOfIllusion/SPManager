@@ -23,9 +23,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEParameterSpec;
 
 
-import java.util.logging.Logger;
-
-
 /**
  *  -----------------------------------------------------------------------------
  *  The following example implements a class for encrypting and decrypting
@@ -41,7 +38,6 @@ import java.util.logging.Logger;
 
 public final class StringEncrypter
 {
-    private static final Logger logger = Logger.getLogger(StringEncrypter.class.getName());
     
     private Cipher ecipher;
     private Cipher dcipher;
@@ -89,7 +85,7 @@ public final class StringEncrypter
         }
         catch (GeneralSecurityException gse )
         {
-          logger.severe(() -> "Security exception " + gse.getMessage());
+          System.out.println("Security exception: " + gse.getMessage());
         }
     }
 
