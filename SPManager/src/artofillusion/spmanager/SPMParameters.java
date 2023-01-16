@@ -17,6 +17,7 @@ import javax.swing.*;
 import buoy.widget.*;
 
 import artofillusion.ui.*;
+import artofillusion.ApplicationPreferences;
 
 /**
  *  Description of the Class
@@ -88,7 +89,7 @@ public class SPMParameters
      */
     private void loadPropertiesFile()
     {
-        File f = new File( System.getProperty( "user.home" ), ".spmanagerprefs" );
+        File f = new File(ApplicationPreferences.getPreferencesDirectory(), ".spmanagerprefs" );
         if ( !f.exists() )
         {
 	    savePropertiesFile();
@@ -266,7 +267,7 @@ public class SPMParameters
     private void savePropertiesFile()
     {
 
-        File f = new File( System.getProperty( "user.home" ), ".spmanagerprefs" );
+        File f = new File(ApplicationPreferences.getPreferencesDirectory(), ".spmanagerprefs" );
         try
         {
             OutputStream out = new BufferedOutputStream( new FileOutputStream( f ) );
