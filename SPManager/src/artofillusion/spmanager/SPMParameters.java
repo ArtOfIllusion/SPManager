@@ -89,7 +89,7 @@ public class SPMParameters
      */
     private void loadPropertiesFile()
     {
-        File f = new File(ApplicationPreferences.getPreferencesDirectory(), ".spmanagerprefs" );
+        File f = new File(ApplicationPreferences.getPreferencesDirectory(), "spmanagerprefs" );
         if ( !f.exists() )
         {
 	    savePropertiesFile();
@@ -267,7 +267,7 @@ public class SPMParameters
     private void savePropertiesFile()
     {
 
-        File f = new File(ApplicationPreferences.getPreferencesDirectory(), ".spmanagerprefs" );
+        File f = new File(ApplicationPreferences.getPreferencesDirectory(), "spmanagerprefs" );
         try
         {
             OutputStream out = new BufferedOutputStream( new FileOutputStream( f ) );
