@@ -89,6 +89,14 @@ public class SPMParameters
      */
     private void loadPropertiesFile()
     {
+        // The old file became obsolete when the server was migrated
+        // HTTPS. Scrub it if it's still around.
+        File oldFile = new File(System.getProperty("user.home"), ".spmanagerprefs");
+        if (oldFile.exists());
+        {
+            System.out.println("Deleting the old .spmanagerprefs file");
+            oldFile.delete();
+        }
         File f = new File(ApplicationPreferences.getPreferencesDirectory(), "spmanagerprefs" );
         if ( !f.exists() )
         {
