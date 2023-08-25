@@ -47,8 +47,9 @@ See http://aoisp.sourceforge.net/spmanagement.html for usage.
     </comments>
 
     <history>
-    <log version="1.103" date="January 13 2023" author="Lucas Stanek">
+    <log version="1.103" date="August 25 2023" author="Lucas Stanek">
     - Hot-patch to work with https connections on the server (hosting provider made a mandatory migration)
+    - Migrate preferences into the standard aoiprefs location
     </log>
     <log version="1.102" date="March 24 2019" author="Lucas Stanek">
     - Rebuild and compatibility updates for Java 8+
